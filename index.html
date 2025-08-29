@@ -19,6 +19,9 @@
 </head>
 <body>
 
+  <!-- Mobile Menu Toggle -->
+  <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+
   <!-- Sidebar -->
   <div class="sidebar">
     <h2>MyPortfolio</h2>
@@ -45,8 +48,6 @@
         </div>
         <div class="home-img text-center">
           <img src="img/ProfileP.jpg" alt="Profile Picture" class="img-fluid rounded mb-3">
-          <div class="d-flex justify-content-center gap-3">
-          </div>
         </div>
       </div>
     </div>
@@ -193,42 +194,41 @@
         <div class="project-card"><img src="img/projj" alt="Portfolio Website"><div class="project-info"><h3>Portfolio Website</h3><p>Personal Project</p></div></div>
       </div>
     </div>
-  </div> 
 
-  <!-- Contact -->
-<div id="contact" class="page-section text-center">
-  <h2 class="section-title">📬 Contact Me</h2>
-  <div class="contact-container">
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <!-- Contact -->
+    <div id="contact" class="page-section text-center">
+      <h2 class="section-title">📬 Contact Me</h2>
+      <div class="contact-container">
+        <form class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
 
-    <div class="contact-info mt-3">
-      <p><i class="fas fa-map-marker-alt"></i> Sariaya, Quezon, Philippines</p>
-      <p><i class="fas fa-envelope"></i> marcmanibo24@gmail.com</p>
-      <p><i class="fas fa-phone"></i> +63 938 399 3530</p>
+        <div class="contact-info mt-3">
+          <p><i class="fas fa-map-marker-alt"></i> Sariaya, Quezon, Philippines</p>
+          <p><i class="fas fa-envelope"></i> marcmanibo24@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +63 938 399 3530</p>
 
-      <!-- Social Links -->
-      <div class="social-links mt-2">
-        <a href="https://facebook.com/YOUR_USERNAME" target="_blank" class="text-white me-3" title="Facebook">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="text-white" title="GitHub">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
+          <!-- Social Links -->
+          <div class="social-links mt-2">
+            <a href="https://facebook.com/YOUR_USERNAME" target="_blank" title="Facebook">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://github.com/YOUR_USERNAME" target="_blank" title="GitHub">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
+  </div> <!-- end main-content -->
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Bootstrap Bundle JS (needed for tabs) -->
+  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
@@ -251,17 +251,25 @@
         e.preventDefault();
         const target = this.dataset.section;
 
-        // Hide all sections
         sections.forEach(sec => sec.classList.remove('active-section'));
-        // Remove active from all links
         sidebarLinks.forEach(l => l.classList.remove('active'));
 
-        // Show selected section
         document.getElementById(target).classList.add('active-section');
         this.classList.add('active');
+
+        // Close sidebar automatically on mobile after clicking
+        if (window.innerWidth <= 992) {
+          document.querySelector('.sidebar').classList.remove('active');
+        }
       });
     });
-  </script>
 
+    // Mobile Sidebar Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
