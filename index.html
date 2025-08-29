@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>MyPortfolio</h2>
+    <a href="#" data-section="home" class="active">🏠 Home</a>
+    <a href="#" data-section="about">👤 About</a>
+    <a href="#" data-section="education">🎓 Education</a>
+    <a href="#" data-section="awards">🏆 Awards</a>
+    <a href="#" data-section="hobbies">🎮 Hobbies</a>
+    <a href="#" data-section="work">💼 Work</a>
+    <a href="#" data-section="projects">📂 Projects</a>
+    <a href="#" data-section="contact">📬 Contact</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+
+    <!-- Home -->
+    <div id="home" class="page-section active-section">
+      <div class="home-container">
+        <div class="home-text">
+          <h1>Hello, my name is <span class="highlight">Marc Ervin Jay O. Mañibo</span></h1>
+          <p>Welcome to my portfolio! Explore some knowledge in Bootstrap below.</p>
+          <a href="https://getbootstrap.com/docs/" target="_blank" class="explore-btn">Learned »</a>
+        </div>
+        <div class="home-img text-center">
+          <img src="img/ProfileP.jpg" alt="Profile Picture" class="img-fluid rounded mb-3">
+          <div class="d-flex justify-content-center gap-3">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About & Skills -->
+    <div id="about" class="page-section text-center">
+      <h2 class="section-title">ℹ️ About & Skills</h2>
+
+      <!-- Toggle Buttons -->
+      <ul class="nav nav-tabs justify-content-center" id="aboutSkillsTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-pane" type="button" role="tab">👤 About</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills-pane" type="button" role="tab">💡 Skills</button>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content mt-4" id="aboutSkillsContent">
+        <!-- About Content -->
+        <div class="tab-pane fade show active" id="about-pane" role="tabpanel" aria-labelledby="about-tab">
+          <div class="about-card">
+            <img src="img/PicdinITO.jpg" alt="Profile Picture" class="about-img">
+            <div class="about-info">
+              <ul>
+                <li><b>Name:</b> Marc Ervin Jay O. Mañibo</li>
+                <li><b>Address:</b> Rabina St. (POB.4) Sariaya, Quezon</li>
+                <li><b>Age:</b> 20</li>
+                <li><b>Gender:</b> Male</li>
+                <li><b>Height:</b> 5'5</li>
+                <li><b>Weight:</b> 58kg</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Content -->
+        <div class="tab-pane fade" id="skills-pane" role="tabpanel" aria-labelledby="skills-tab">
+          <div class="swiper mySkills">
+            <div class="swiper-wrapper">
+              <!-- Skill Slides -->
+              <div class="swiper-slide">
+                <div class="card text-center p-3">
+                  <img src="img/repair.jpg" alt="Internet Repair" class="mx-auto mb-2" style="width:70px;">
+                  <h5>Repairing Internet</h5>
+                  <p>Skilled in diagnosing and fixing internet connectivity issues, including hardware and software troubleshooting.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card text-center p-3">
+                  <img src="img/msword.webp" alt="MS Word" class="mx-auto mb-2" style="width:70px;">
+                  <h5>MS Word</h5>
+                  <p>Proficient in creating, formatting, and editing professional documents using Microsoft Word.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card text-center p-3">
+                  <img src="img/ROuter.png" alt="Router" class="mx-auto mb-2" style="width:70px;">
+                  <h5>Router Configuration</h5>
+                  <p>Experienced in setting up and configuring routers for secure and reliable network performance.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card text-center p-3">
+                  <img src="img/ProbSolb.jpg" alt="Problem Solving" class="mx-auto mb-2" style="width:70px;">
+                  <h5>Problem Solving</h5>
+                  <p>Strong analytical skills to identify issues and provide efficient, practical solutions.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card text-center p-3">
+                  <img src="img/teams.png" alt="Teamwork" class="mx-auto mb-2" style="width:70px;">
+                  <h5>Teamwork</h5>
+                  <p>Effective collaborator with experience working in group projects and achieving common goals.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card text-center p-3">
+                  <img src="img/adapt" alt="Adaptability" class="mx-auto mb-2" style="width:70px;">
+                  <h5>Adaptability</h5>
+                  <p>Quick to adjust to new environments, tools, and technologies while maintaining productivity.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div id="education" class="page-section text-center">
+      <h2 class="section-title">🎓 Education</h2>
+      <div class="edu-container">
+        <div class="edu-card"><img src="img/ElementaryLOgo" alt="Elementary School"><div class="edu-info"><h3>Elementary (2010-2016)</h3><p>Central Main Elementary School</p></div></div>
+        <div class="edu-card"><img src="img/piliLogo" alt="High School"><div class="edu-info"><h3>Junior High School (2017-2020)</h3><p>Pili National High School</p></div></div>
+        <div class="edu-card"><img src="img/SeniorH.jpg" alt="Senior High School"><div class="edu-info"><h3>Senior High School (2021-2022)</h3><p>College of Science Technology and Communication Inc.</p></div></div>
+        <div class="edu-card"><img src="img/SIT.webp" alt="College"><div class="edu-info"><h3>College (2023-Ongoing)</h3><p>BS in Information Technology<br>CSTC Sariaya Campus</p></div></div>
+      </div>
+    </div>
+
+    <!-- Awards -->
+    <div id="awards" class="page-section text-center">
+      <h2 class="section-title">🏆 Awards</h2>
+      <div class="awards-container">
+        <div class="award-card"><img src="img/happyy.jpg" alt="Conduct Award"><div class="award-info"><h3>Conduct Award</h3><p>Grade 8</p></div></div>
+        <div class="award-card"><img src="img/perfecsts" alt="Perfect Attendance"><div class="award-info"><h3>Perfect Attendance</h3><p>Grade 9</p></div></div>
+        <div class="award-card"><img src="img/steppss.jpeg" alt="With Honors"><div class="award-info"><h3>With Honors</h3><p>Grade 11</p></div></div>
+        <div class="award-card"><img src="img/niyog2024" alt="2nd Placer Propsmen"><div class="award-info"><h3>2nd Placer - Propsmen</h3><p>Niyogyugan 2024</p></div></div>
+      </div>
+    </div>
+
+    <!-- Hobbies -->
+    <div id="hobbies" class="page-section text-center">
+      <h2 class="section-title">🎮 Hobbies</h2>
+      <div class="hobbies-grid">
+        <div class="hobby-box"><img src="img/MLSS" alt="Gaming" class="hobby-img"><p>Gaming</p></div>
+        <div class="hobby-box"><img src="img/Basketball.jpg" alt="Basketball" class="hobby-img"><p>Basketball</p></div>
+        <div class="hobby-box"><img src="img/man-playing-billiards.jpg" alt="Billiards" class="hobby-img"><p>Billiards</p></div>
+        <div class="hobby-box"><img src="img/ridess" alt="Riding" class="hobby-img"><p>Riding</p></div>
+        <div class="hobby-box"><img src="img/rubiksss" alt="Rubik's Cube" class="hobby-img"><p>Rubik's Cube</p></div>
+      </div>
+    </div>
+
+    <!-- Work -->
+    <div id="work" class="page-section text-center">
+      <h2 class="section-title">💼 Work Experience</h2>
+      <div class="work-container">
+        <div class="work-card"><img src="img/CompsW.jpg" alt="Computer Attendant"><div class="work-info"><h3>Computer Attendant</h3><p>Bunak'z Future Net</p></div></div>
+        <div class="work-card"><img src="img/Wbill.jpg" alt="Billiard Attendant"><div class="work-info"><h3>Billiard Attendant</h3><p>Bunak'z Billiard's</p></div></div>
+        <div class="work-card"><img src="img/WifiASsis.png" alt="Wifi Installer Assistance"><div class="work-info"><h3>Wifi Installer Assistance</h3><p>Data Network and Solution</p></div></div>
+        <div class="work-card"><img src="img/laborees.jpg" alt="Laborer"><div class="work-info"><h3>Laborer</h3><p>Construction</p></div></div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects" class="page-section text-center">
+      <h2 class="section-title">📂 Projects</h2>
+      <div class="projects-container">
+        <div class="project-card"><img src="img/rpg.jpg" alt="RPG Maker Project"><div class="project-info"><h3>RPG MAKER'z</h3><p>Second Year College</p></div></div>
+        <div class="project-card"><img src="img/projj" alt="Portfolio Website"><div class="project-info"><h3>Portfolio Website</h3><p>Personal Project</p></div></div>
+      </div>
+    </div>
+  </div> 
+
+  <!-- Contact -->
+<div id="contact" class="page-section text-center">
+  <h2 class="section-title">📬 Contact Me</h2>
+  <div class="contact-container">
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info mt-3">
+      <p><i class="fas fa-map-marker-alt"></i> Sariaya, Quezon, Philippines</p>
+      <p><i class="fas fa-envelope"></i> marcmanibo24@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +63 938 399 3530</p>
+
+      <!-- Social Links -->
+      <div class="social-links mt-2">
+        <a href="https://facebook.com/YOUR_USERNAME" target="_blank" class="text-white me-3" title="Facebook">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="text-white" title="GitHub">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Bootstrap Bundle JS (needed for tabs) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Skills Swiper
+    var skillsSwiper = new Swiper(".mySkills", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      breakpoints: { 768: { slidesPerView: 2 }, 992: { slidesPerView: 3 } }
+    });
+
+    // Sidebar navigation
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    const sections = document.querySelectorAll('.page-section');
+
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = this.dataset.section;
+
+        // Hide all sections
+        sections.forEach(sec => sec.classList.remove('active-section'));
+        // Remove active from all links
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+
+        // Show selected section
+        document.getElementById(target).classList.add('active-section');
+        this.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
